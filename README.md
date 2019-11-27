@@ -3,7 +3,8 @@ Dockerfile for channels-dvr on arm64v8
 Built to use with LibreElec on a Rock64
 
 ## Example build:
-docker build -t jdustinlewis/channels-arm64v8:latest -t jdustinlewis/channels-arm64v8:standard standard/
+cd jdustinlewis/channels-dvr-arm64v8-docker
+docker build -t jdustinlewis/channels-arm64v8:latest -t jdustinlewis/channels-arm64v8:tve tve/
 
 ## Example run:
 docker run -it --rm -p 8089:8089 --mount type=bind,source=$external_channels_dvr_dir,target=/channels-dvr --name channels-test jdustinlewis/channels-arm64v8:tve
