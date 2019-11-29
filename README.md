@@ -17,5 +17,5 @@ docker run -dit --restart always -p 8089:8089 \
 ```
 
 ## Bugs:
-* Only knows its internal Docker IP address, which makes discovery difficult. When you first authenticate, it will redirect incorrectly to that IP address and time out, but if you replace it with the correct address it will work.
+* The image only knows its internal Docker IP address, which makes discovery difficult. When you first authenticate, it will redirect incorrectly to that IP address and time out. Just replace the bad address in the URL with the correct one and it will work.
 * I have had trouble with NTFS permissions on LibreElec (specifically making files executable). So I use something on my main OS drive (ext4) for /channels-dvr, then mount my external drive (NTFS) to /dvr.
