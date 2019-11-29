@@ -10,8 +10,10 @@ docker build -t jdustinlewis/channels-arm64v8:latest -t jdustinlewis/channels-ar
 
 ## Example run:
 ```
-docker run -dit --restart always -p 8089:8089 --mount type=bind,source=$CHANNELS_DATA_FOLDER,target=/channels-dvr\
---mount type=bind,source=$CHANNELS_DVR_FOLDER,target=/dvr --name channels-dvr jdustinlewis/channels-arm64v8:tve
+docker run -dit --restart always -p 8089:8089 \
+--mount type=bind,source=$CHANNELS_DATA_FOLDER,target=/channels-dvr \
+--mount type=bind,source=$CHANNELS_DVR_FOLDER,target=/dvr \
+--name channels-dvr jdustinlewis/channels-arm64v8:tve
 ```
 
 ## Bugs:
